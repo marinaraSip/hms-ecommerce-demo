@@ -308,6 +308,43 @@ public class OrderSubmitActivityViewModel extends BaseActivityViewModel<OrderSub
     /**
      * Get User Address by Identity Kit
      */
+    
+    private void getUserCookies() {
+        UserCookiesRequest req = new UserCookiesRequest();
+        Task<GetUserCookiesResult> task = Address.getCookiesClient(mActivity).getUserCookies(req);
+        task.addOnSuccessListener(result -> {
+            Log.i(TAG, "onSuccess result code:" + result.getReturnCode());
+            try {
+                startActivityForResult(result);
+            } catch (IntentSender.SendIntentException e) {
+                Log.e(TAG, e.getMessage(), e);
+            }
+        }).addOnFailureListener(e -> {
+            Log.i(TAG, "on Failed result code:" + e.getMessage());
+            if (e instanceof ApiException) {
+                ApiException apiException = (ApiException) e;
+                switch (apiException.getStatusCode()) {
+                    case 60054:
+                        Toast.makeText(mActivity, R.string.country_not_supported_identity, Toast.LENGTH_SHORT).show();
+                        break;
+                    case 60055:
+                        Toast.makeText(mActivity, R.string.child_account_not_supported_identity, Toast.LENGTH_SHORT)
+                            .show();
+                        break;
+                    default: {
+                        Toast
+                            .makeText(mActivity,
+                                "errorCode:" + apiException.getStatusCode() + ", errMsg:" + apiException.getMessage(),
+                                Toast.LENGTH_SHORT)
+                            .show();
+                    }
+                }
+            } else {
+                Log.i(TAG, "on Failed result code:" + e.toString());
+            }
+        });
+    }
+    
     private void getUserAddress() {
         UserAddressRequest req = new UserAddressRequest();
         Task<GetUserAddressResult> task = Address.getAddressClient(mActivity).getUserAddress(req);
