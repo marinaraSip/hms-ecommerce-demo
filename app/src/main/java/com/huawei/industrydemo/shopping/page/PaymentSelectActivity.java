@@ -212,20 +212,20 @@ public class PaymentSelectActivity extends BaseActivity implements View.OnClickL
         resultBuilder.append(bankCardResult.getNumber());
         resultBuilder.append(System.lineSeparator());
 
-//         resultBuilder.append(getString(R.string.card_issuer));
-//         resultBuilder.append(bankCardResult.getIssuer());
-//         resultBuilder.append(System.lineSeparator());
+        resultBuilder.append(getString(R.string.card_issuer));
+        resultBuilder.append(bankCardResult.getIssuer());
+        resultBuilder.append(System.lineSeparator());
 
-//         resultBuilder.append(getString(R.string.card_expire));
-//         resultBuilder.append(bankCardResult.getExpire());
-//         resultBuilder.append(System.lineSeparator());
+        resultBuilder.append(getString(R.string.card_expire));
+        resultBuilder.append(bankCardResult.getExpire());
+        resultBuilder.append(System.lineSeparator());
 
-//         resultBuilder.append(getString(R.string.card_type));
-//         resultBuilder.append(bankCardResult.getType());
-//         resultBuilder.append(System.lineSeparator());
+        resultBuilder.append(getString(R.string.card_type));
+        resultBuilder.append(bankCardResult.getType());
+        resultBuilder.append(System.lineSeparator());
 
-//         resultBuilder.append(getString(R.string.card_organization));
-//         resultBuilder.append(bankCardResult.getOrganization());
+        resultBuilder.append(getString(R.string.card_organization));
+        resultBuilder.append(bankCardResult.getOrganization());
         resultBuilder.append(System.lineSeparator());
 
         return resultBuilder.toString();
