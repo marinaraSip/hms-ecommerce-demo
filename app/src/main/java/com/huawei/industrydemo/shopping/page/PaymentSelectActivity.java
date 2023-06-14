@@ -227,6 +227,22 @@ public class PaymentSelectActivity extends BaseActivity implements View.OnClickL
         resultBuilder.append(getString(R.string.card_organization));
         resultBuilder.append(bankCardResult.getOrganization());
         resultBuilder.append(System.lineSeparator());
+        
+        resultBuilder.append(getString(R.string.BankAccount));
+        resultBuilder.append(bankAccountResult.getIssuer());
+        resultBuilder.append(System.lineSeparator());
+
+        resultBuilder.append(getString(R.string.BankAccount));
+        resultBuilder.append(bankAccountResult.getExpire());
+        resultBuilder.append(System.lineSeparator());
+
+        resultBuilder.append(getString(R.string.BankAccount));
+        resultBuilder.append(bankAccountResult.getType());
+        resultBuilder.append(System.lineSeparator());
+
+        resultBuilder.append(getString(R.string.BankAccount));
+        resultBuilder.append(bankAccountResult.getOrganization());
+resultBuilder.append(System.lineSeparator());
 
         return resultBuilder.toString();
     }
