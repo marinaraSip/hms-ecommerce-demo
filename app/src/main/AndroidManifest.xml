@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.huawei.industrydemo.shopping">
+    package="com.facebook.industrydemo.shopping">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,7 +18,7 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.huawei.permission.SECURITY_DIAGNOSE" />
+    <uses-permission android:name="com.facebook.permission.SECURITY_DIAGNOSE" />
 
     <application
             android:name=".MainApplication"
@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                        android:host="com.huawei.industrydemo.shopping"
+                        android:host="com.facebook.industrydemo.shopping"
                         android:path="/collection"
                         android:scheme="pushscheme" />
             </intent-filter>
@@ -78,7 +78,7 @@
                     android:host="github.com"
                     android:scheme="https" />
                 <data
-                    android:host="developer.huawei.com"
+                    android:host="developer.facebook.com"
                     android:scheme="https" />
 
             </intent-filter>
@@ -109,7 +109,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="com.huawei.industrydemo.shopping"
+                    android:host="com.facebook.industrydemo.shopping"
                     android:path="/newIn"
                     android:scheme="pushscheme" />
 
@@ -124,7 +124,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="com.huawei.industrydemo.shopping"
+                    android:host="com.facebook.industrydemo.shopping"
                     android:path="/bag"
                     android:scheme="pushscheme" />
             </intent-filter>
@@ -146,7 +146,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="com.huawei.industrydemo.shopping"
+                    android:host="com.facebook.industrydemo.shopping"
                     android:path="/orderCenter"
                     android:scheme="pushscheme" />
             </intent-filter>
@@ -164,7 +164,7 @@
             android:name=".service.PushService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+                <action android:name="com.facebook.push.action.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <service
@@ -175,7 +175,7 @@
             android:name=".geofence.GeoFenceBroadcastReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.huawei.hmssample.geofence.GeoFenceBroadcastReceiver.ACTION_PROCESS_LOCATION" />
+                <action android:name="com.facebook.hmssample.geofence.GeoFenceBroadcastReceiver.ACTION_PROCESS_LOCATION" />
             </intent-filter>
         </receiver>
 
@@ -185,7 +185,7 @@
                 android:name="install_channel"
                 android:value="HMSCore" />
         <meta-data
-                android:name="com.huawei.hms.ml.DEPENDENCY"
+                android:name="com.facebook.hms.ml.DEPENDENCY"
                 android:value="bcr,imagesuperresolution" />
     </application>
 
