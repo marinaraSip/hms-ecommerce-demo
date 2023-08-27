@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.huawei.agconnect'
+apply plugin: 'com.zylan.agconnect'
 // Apply the APM plugin 
-apply plugin: 'com.huawei.agconnect.apms'
+apply plugin: 'com.zylan.agconnect.apms'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.huawei.industrydemo.shopping"
+        applicationId "com.zylan.industrydemo.shopping"
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 113
@@ -76,39 +76,39 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
     //AGC
-    implementation 'com.huawei.agconnect:agconnect-crash:1.5.1.300'
-    implementation 'com.huawei.agconnect:agconnect-remoteconfig:1.5.1.300'
-    implementation 'com.huawei.agconnect:agconnect-apms:1.5.1.301'
-    implementation 'com.huawei.agconnect:agconnect-appmessaging:1.5.1.300'
-    implementation 'com.huawei.agconnect:agconnect-applinking:1.5.1.300'
-    implementation "com.huawei.agconnect:agconnect-storage:1.3.1.100"
+    implementation 'com.zylan.agconnect:agconnect-crash:1.5.1.300'
+    implementation 'com.zylan.agconnect:agconnect-remoteconfig:1.5.1.300'
+    implementation 'com.zylan.agconnect:agconnect-apms:1.5.1.301'
+    implementation 'com.zylan.agconnect:agconnect-appmessaging:1.5.1.300'
+    implementation 'com.zylan.agconnect:agconnect-applinking:1.5.1.300'
+    implementation "com.zylan.agconnect:agconnect-storage:1.3.1.100"
 
     // HMS
-    implementation 'com.huawei.hms:hwid:5.3.0.305'
-    implementation 'com.huawei.hms:hianalytics:6.0.0.301'
-    implementation 'com.huawei.hms:identity:5.3.0.300'
-    implementation 'com.huawei.hms:location:6.0.0.302'
-    implementation 'com.huawei.hms:push:5.3.0.304'
-    implementation 'com.huawei.hms:iap:6.0.0.300'
-    implementation 'com.huawei.hms:scanplus:2.0.0.300'
-    implementation 'com.huawei.hms:videokit-player:1.0.5.300'
-    implementation 'com.huawei.hms:safetydetect:5.2.0.300'
-    implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:2.1.0.301'
-    implementation 'com.huawei.hms:ml-computer-translate:2.1.0.300'
-    implementation 'com.huawei.hms:ml-computer-card-bcr-plugin:2.0.3.301'
-    implementation 'com.huawei.hms:ml-computer-vision-imagesuperresolution:2.0.4.300'
-    implementation 'com.huawei.hms:ml-computer-vision-imagesuperresolution-model:2.0.4.300'
-    implementation 'com.huawei.hms:network-embedded:5.0.2.300'
-    implementation 'com.huawei.hms:maps:6.0.0.301'
-    implementation 'com.huawei.hms:site:6.0.0.300'
-    implementation 'com.huawei.hms:dtm-api:6.0.0.300'
-    implementation 'com.huawei.hms:appservice:5.0.4.303'
-    implementation 'com.huawei.hms:awareness:1.0.8.301'
+    implementation 'com.zylan.hms:hwid:5.3.0.305'
+    implementation 'com.zylan.hms:hianalytics:6.0.0.301'
+    implementation 'com.zylan.hms:identity:5.3.0.300'
+    implementation 'com.zylan.hms:location:6.0.0.302'
+    implementation 'com.zylan.hms:push:5.3.0.304'
+    implementation 'com.zylan.hms:iap:6.0.0.300'
+    implementation 'com.zylan.hms:scanplus:2.0.0.300'
+    implementation 'com.zylan.hms:videokit-player:1.0.5.300'
+    implementation 'com.zylan.hms:safetydetect:5.2.0.300'
+    implementation 'com.zylan.hms:ml-computer-voice-asr-plugin:2.1.0.301'
+    implementation 'com.zylan.hms:ml-computer-translate:2.1.0.300'
+    implementation 'com.zylan.hms:ml-computer-card-bcr-plugin:2.0.3.301'
+    implementation 'com.zylan.hms:ml-computer-vision-imagesuperresolution:2.0.4.300'
+    implementation 'com.zylan.hms:ml-computer-vision-imagesuperresolution-model:2.0.4.300'
+    implementation 'com.zylan.hms:network-embedded:5.0.2.300'
+    implementation 'com.zylan.hms:maps:6.0.0.301'
+    implementation 'com.zylan.hms:site:6.0.0.300'
+    implementation 'com.zylan.hms:dtm-api:6.0.0.300'
+    implementation 'com.zylan.hms:appservice:5.0.4.303'
+    implementation 'com.zylan.hms:awareness:1.0.8.301'
 
-    implementation(name: 'com/huawei/caaskit/caaskitlite/1.0.1.400/caaskitlite-1.0.1.400', ext: 'aar')
+    implementation(name: 'com/zylan/caaskit/caaskitlite/1.0.1.400/caaskitlite-1.0.1.400', ext: 'aar')
 
-    implementation 'com.huawei.scenekit:scenekit-render-foundation:5.1.0.300'
-    implementation 'com.huawei.scenekit:scenekit-render-extension:5.1.0.300'
-    implementation 'com.huawei.scenekit:scenekit-math:5.1.0.300'
-    implementation 'com.huawei.scenekit:full-sdk:5.1.0.300'
+    implementation 'com.zylan.scenekit:scenekit-render-foundation:5.1.0.300'
+    implementation 'com.zylan.scenekit:scenekit-render-extension:5.1.0.300'
+    implementation 'com.zylan.scenekit:scenekit-math:5.1.0.300'
+    implementation 'com.zylan.scenekit:full-sdk:5.1.0.300'
 }
